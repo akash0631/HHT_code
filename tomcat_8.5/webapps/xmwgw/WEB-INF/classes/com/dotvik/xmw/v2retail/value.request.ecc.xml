@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<value-handlers>
+ 		<request-handler>
+                <opcode>hugetdetails</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_HU_GET_DETAILS</class>
+                <name>ZWM Hand Unit Get Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>scnrec</opcode>
+                <class>com.dotvik.xmw.v2retail.ZWM_USER_AUTHORITY_CHECK</class>
+                <name>ZWM Authentication</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+       
+        
+        <request-handler>
+                <opcode>savegrcputway</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GRC_PUTWAY</class>
+                <name>ZWM GRC Putway</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savefloorputway</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_FLOOR_PUTWAY</class>
+                <name>ZWM Store Floor Putway</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>storegetbin</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_BIN</class>
+                <name>ZWM Get Bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>storegetbin_v2</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_BIN_V2</class>
+                <name>ZWM Get Bin v2</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>getstorestock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_STOCK</class>
+                <name>ZWM Get Store Stock</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>storegetbinstock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_BIN_STOCK</class>
+                <name>ZWM Get Store Bin Stock</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savedirectpicking</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_DIRECT_PICKING</class>
+                <name>ZWM Save Store Direct Picking</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savedirectpicking_v2</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_DIRECT_PICKING_V2</class>
+                <name>ZWM Save Store Direct Picking Version 2 for PickList Number</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savegrtmsa</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GRT_FROM_MSA</class>
+                <name>ZWM Store GRT from MSA</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>getstorepicklist</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_PICKLIST</class>
+                <name>ZWM Store GRT from MSA</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>getstorepicklist_v2</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_PICKLIST_V2</class>
+                <name>ZWM Store GRT from MSA, Paperless picking</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_picklist_nos_disp</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_PICKLIST_NOS_DISP</class>
+                <name>ZWM Store Picklist</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+
+         <request-handler>
+                <opcode>gethus</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_HUS</class>
+                <name>ZWM Store Get HUS</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+
+         <request-handler>
+                <opcode>savehus</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_HU_GRC</class>
+                <name>ZWM Store Save HUS</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+         <request-handler>
+                <opcode>savebtob</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_TRANSFER_BIN_TO_BIN</class>
+                <name>ZWM Store Save b to b</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>validatesloc</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_VALIDATE_SLOC</class>
+                <name>ZWM Store Validate loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+
+        <request-handler>
+                <opcode>savegrdata</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_TO_CREATE_FROM_GR_DATA</class>
+                <name>ZWM Store Save GR Data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+       	
+        <request-handler>
+                <opcode>validatebin</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_GET_BIN_DETAILS</class>
+                <name>ZWM Store Save GR Data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+
+        <request-handler>
+                <opcode>getmatbinstock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_MAT_BIN_STOCK</class>
+                <name>ZWM Store get mat bin stock</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>getmatbinstockbtob</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_MAT_BIN_STOCK_BTOB</class>
+                <name>ZWM Store get mat bin stock</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savesloctoslocwwm</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_TRANSFER_SLOC_TO_SLO</class>
+                <name>ZWM Store save loc to loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+                
+
+        <request-handler>
+                <opcode>savegrtfromdisplay</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GRT_FROM_DISP_AREA</class>
+                <name>ZWM Store save loc to loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+
+
+        <request-handler>
+                <opcode>getstorestocktake</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_STOCK_take</class>
+                <name>ZWM Store save loc to loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savefloorputwaytake</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_FLOOR_PUTWAY_take</class>
+                <name>ZWM Store save loc to loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+     
+        <request-handler>
+                <opcode>packgingmaterial</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_GET_PACKING_MATERIAL</class>
+                <name>ZWM Store save loc to loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>articledetails</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_APP_ARTICLE_DETAILS</class>
+                <name>ZWM Store Article Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+ 
+        <request-handler>
+                <opcode>getsloc</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_SLOC</class>
+                <name>ZWM Store save loc to loc</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>validatestocktakeid</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_STORE_VALDIATE_STID</class>
+                <name>ZWM Store Stock Take Validate</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>validatestoreean</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_STORE_EAN_DATA</class>
+                <name>ZWM Validate store ean data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>validatestoreean_v2</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_STORE_EAN_DATA_STK_V2</class>
+                <name>ZWM Validate store ean data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>storestidpost</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_STORE_STID_POST</class>
+                <name>ZWM store stoke post</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>pushdatatosap01stock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_PUSHDATATOSAP_1STOCK</class>
+                <name>ZWM store push data to sap 0001</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zhwm_store_pushdatasap_1stock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_PUSHDATATOSAP_1STOCK</class>
+                <name>ZWM Store push data stock</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>get_v01_001s_stock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_V01_001S_STOCK</class>
+                <name>Putway to 0001 Store process</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>validatestocktakeid_mc</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_GET_EAN_STID_MC</class>
+                <name>MC: Validate Stock Take Id for MC</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>validategandola_mc</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_STORE_VALDIATE_GANDOLA</class>
+                <name>MC: Validate Gandola for MC</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+
+
+		<request-handler>
+                <opcode>storestidpost_mc</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_RFC_STORE_STID_SAVE_MC</class>
+                <name>MC: ZWM 0001 store stock post for MC</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>get_v01_001s_post</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_V01_001S_POST</class>
+                <name>ZWM store putway to 0001 posting</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>store_trf_0001_to_0010</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_TRF_0001_TO_0010</class>
+                <name>ZWM store trf to 0001 to 0010</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>    
+        
+        
+        
+        <request-handler>
+                <opcode>store_get_mat_from_ean</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_MAT_FROM_EAN_V2</class>
+                <name>ZWM store get mat from ean for warehouse stock take</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>store_0001_stock_take</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_0001_STOCK_TAKE_V2</class>
+                <name>ZWM store 0001 stock take</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_store_0001_reverse_stock</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_0001_REVERSE_STOCK</class>
+                <name>ZWM store 0001 reverse stock</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_floor_putway_hu</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_FLOOR_PUTWAY_HU</class>
+                <name>ZWM Store Floor Putway HU</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+       
+       
+       <request-handler>
+                <opcode>zwm_store_bin_list_validation</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_BIN_LIST_VALIDATION</class>
+                <name>ZWM Store bin list validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_hu_validation</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_HU_VALIDATE</class>
+                <name>ZWM Store HU validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_bin_con_picking_hu</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_BIN_CON_PICKING_HU</class>
+                <name>ZWM Store HU validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_binconhu_get_details</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_BINCONHU_GET_DETAILS</class>
+                <name>ZWM Store HU validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_get_bin</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_BIN</class>
+                <name>ZWM Get Bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_store_get_bin_v2</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_BIN_V2</class>
+                <name>ZWM Get Bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_store_hu_putway_bin_con</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_HU_PUTWAY_BIN_CON</class>
+                <name>ZWM Get Bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_pushdatatosap_1total</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_PUSHDATATOSAP_1TOTAL</class>
+                <name>Push Data to SAP, BIN QTY</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+
+
+ 		<request-handler>
+                <opcode>zwm_store_get_major_cat</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_MAJOR_CAT</class>
+                <name>Get Major Category</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+         <request-handler>
+                <opcode>zwm_store_get_major_cat_data</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_GET_MAJOR_CAT_DATA</class>
+                <name>Get Major Category Data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_store_pushdatatosap_1dis</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_STORE_PUSHDATATOSAP_1DIS</class>
+                <name>Discount Date push to SAP</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+
+        
+        <!-- For DC Middleware -->
+        
+        <request-handler>
+                <opcode>disrec</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_FM_BARCODE_GET_TO_DATA</class>
+                <name>ZWM DC fm bar code get to data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>scnsel</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_VALIDATE_CRATE</class>
+                <name>ZWM DC Validate Crate</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>nitrec</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_PO_GET_DETAILS</class>
+                <name>ZWM DC PO Get Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>nitdel</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_FM_VALIDATE_BIN</class>
+                <name>ZWM DC PO Get Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>nitupd</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_VALIDATE_PURCHASE_ORDER</class>
+                <name>ZWM DC Validate Purchage Order</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+   
+   		<request-handler>
+                <opcode>validatecrateto</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_GET_DEST_BIN</class>
+                <name>ZWM DC Get Dest Bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>createto</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_TO_CREATE_FROM_SCAN_DATA</class>
+                <name>ZWM DC To Create from scan data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+          
+          
+        <request-handler>
+                <opcode>scndelivery</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DELIVERY_GET_DETAILS</class>
+                <name>ZWM DC Delivery Get Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_delivery_get_details_plp2</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DELIVERY_GET_DETAILS_PLP2</class>
+                <name>ZWM DC Delivery Get Details for PLP</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savehuassign</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_CREATE_HU_AND_ASSIGN</class>
+                <name>ZWM DC Create HU and Assign</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>hudetails</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_HU_GET_DETAILS</class>
+                <name>ZWM DC HU Get Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savehudetails</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_UPDATE_HU_AND_ASSIGN</class>
+                <name>ZWM DC Update HU and Assign</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>getgrdetails</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_GR_GET_DETAILS</class>
+                <name>ZWM DC GR get details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <!--  Adding case sensitive --> 
+        <request-handler>
+                <opcode>getGRDetails</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_GR_GET_DETAILS</class>
+                <name>ZWM DC GR get details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>savegrdata</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_TO_CREATE_FROM_GR_DATA</class>
+                <name>ZWM DC To Create From GR Data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>savegrdata</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_TO_CREATE_FROM_GR_DATA</class>
+                <name>ZWM DC To Create From GR Data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>savestaocktake</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DC_STOCK_TAKE</class>
+                <name>ZWM DC Stock Take</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>get81seariesdata</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_GET_PPK_COMPONENT</class>
+                <name>ZWM DC Stock Take</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>savecrate</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_PO_SCAN_DATA_SAVE</class>
+                <name>ZWM DC Save Crate</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>SaveCrate</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_PO_SCAN_DATA_SAVE</class>
+                <name>ZWM DC Save Crate</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>stocktakegetdetails</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_TAKE_GET_DETAILS</class>
+                <name>ZWM DC Stock Take Get Details</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>stockvalidatebarcode</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_VALIDATE_BARCODE</class>
+                <name>ZWM DC Stock Validate Barcode</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>stocktakesavedata</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_TAKE_SAVE_DATA</class>
+                <name>ZWM DC Stock Take Save Data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <!-- DC GRT Process for Scaning and Putway -->
+        
+        <request-handler>
+                <opcode>zwm_validate_dc_sloc</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_VALIDATE_DC_SLOC</class>
+                <name>ZWM validate DC and Location</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_rfc_validate_crate</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_VALIDATE_CRATE</class>
+                <name>ZWM validate create</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_grt_save</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_GRT_SAVE</class>
+                <name>ZWM GRT Save</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_grt_putway_crate_validation</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_GRT_PUTWAY_CRATE_VAL</class>
+                <name>ZWM GRT PUWAY Crate Validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_grt_putway_post</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_GRT_PUTWAY_POST</class>
+                <name>ZWM GRT PUWAY Posting</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_rfc_store_ean_data_stk</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STORE_EAN_DATA_STK</class>
+                <name>ZWM Store EAN DATA STK</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_validate_empty_bin</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_VALIDATE_EMPTY_BIN</class>
+                <name>ZWM Validate Empty bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_save_empty_bin</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_SAVE_EMPTY_BIN</class>
+                <name>ZWM Save empty bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_validate_external_hu</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_VALIDATE_EXTERNAL_HU</class>
+                <name>ZWM Save empty bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+                
+        <request-handler>
+                <opcode>zwm_get_grc_bins</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_GET_GRC_BINS</class>
+                <name>ZWM get grc bins</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_to_get_details</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_TO_GET_DETAILS</class>
+                <name>ZWM get transfer order details for paper less picking</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_to_scan_data_save</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_TO_SCAN_DATA_SAVE</class>
+                <name>ZWM TO picking save scan data</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_rfc_stock_take_crate_vali</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_TAKE_CRATE_VALI</class>
+                <name>ZWM Stock Take Crate Validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+         <request-handler>
+                <opcode>zwm_dc_hugrt_hu_val</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DC_HUGRT_HU_VAL</class>
+                <name>ZWM DC HU GRT HU Validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_dc_hugrt_binhu_val</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DC_HUGRT_BINHU_VAL</class>
+                <name>ZWM DC HU GRT Bin HU Validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_dc_hu_grt_val</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DC_HU_GRT_VAL</class>
+                <name>ZWM DC HU GRT Validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_dc_hugrt_save</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_DC_HUGRT_SAVE</class>
+                <name>ZWM DC HU GRT Save</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <!--  For DC Proccess V11 to MSA -->
+        
+        <request-handler>
+                <opcode>zwm_rfc_stock_take_bin_vali</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_TAKE_BIN_VALI</class>
+                <name>ZWM RFC Stock take bin validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_rfc_stock_take_arti_vali</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_TAKE_ARTI_VALI</class>
+                <name>ZWM RFC Stock take article validation</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_rfc_stock_take_save_v11</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_TAKE_SAVE_V11</class>
+                <name>ZWM RFC Stock V11 to MSA</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+         <request-handler>
+                <opcode>zwm_vali_crate_emptybin</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_VALI_CRATE_EMPTYBIN</class>
+                <name>ZWM Validate Crate for empty bin</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+                
+        <request-handler>
+                <opcode>zhhtusr_del_picking_rfc</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZHHTUSR_DEL_PICKING_RFC</class>
+                <name>User Delivery Picking in DC</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_rfc_stock_movement_v21</opcode>
+                <class>com.dotvik.xmw.v2retail.dcmw.ZWM_RFC_STOCK_MOVEMENT_V21</class>
+                <name>Shade Stock Movement</name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        
+        <request-handler>
+                <opcode>zwm_get_sto_data</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_GET_STO_DATA</class>
+                <name></name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_save_grc_to_data</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_SAVE_GRC_TO_DATA</class>
+                <name></name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+                
+        <request-handler>
+                <opcode>zwm_floor_puaway_new</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_FLOOR_PUAWAY_NEW</class>
+                <name></name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+        
+        <request-handler>
+                <opcode>zwm_hu_quan</opcode>
+                <class>com.dotvik.xmw.v2retail.storemw.ZWM_HU_QUAN</class>
+                <name></name>
+                <sap-destination>V2RETAIL_ECC_QA</sap-destination>
+        </request-handler>
+</value-handlers>

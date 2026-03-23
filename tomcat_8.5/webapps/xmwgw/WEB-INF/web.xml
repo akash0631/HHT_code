@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>xmwgateway</display-name>
+
+	<filter>
+		<filter-name>CorsFilter</filter-name>
+		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+		<init-param>
+			<param-name>cors.allowed.origins</param-name>
+			<param-value>*</param-value>
+		</init-param>
+		<init-param>
+			<param-name>cors.allowed.methods</param-name>
+			<param-value>GET,POST,HEAD,OPTIONS,PUT</param-value>
+		</init-param>
+		<init-param>
+			<param-name>cors.allowed.headers</param-name>
+			<param-value>Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Access-Control-Allow-Origin</param-value>
+		</init-param>
+		<init-param>
+			<param-name>cors.exposed.headers</param-name>
+			<param-value>Access-Control-Allow-Origin,Access-Control-Request-Header</param-value>
+		</init-param>
+		<init-param>
+			<param-name>cors.preflight.maxage</param-name>
+			<param-value>1080</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter</filter-name>
+		<url-pattern>/noacljsonrfcadaptor</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>IPAccessControlFilter</filter-name>
+		<filter-class>com.dotvik.xmw.filter.ACLServletFilter</filter-class>
+		<init-param>
+			<param-name>test-param</param-name>
+			<param-value>Initialization Paramter</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>AfmAccessControlFilter</filter-name>
+		<filter-class>com.dotvik.xmw.filter.AFMServletFilter</filter-class>
+		<init-param>
+			<param-name>test-param</param-name>
+			<param-value>Initialization Paramter</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>IPAccessControlFilter</filter-name>
+		<url-pattern>/rfctojson</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IPAccessControlFilter</filter-name>
+		<url-pattern>/jsonrfcadaptor</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>AfmAccessControlFilter</filter-name>
+		<url-pattern>/rfctojson</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>AfmAccessControlFilter</filter-name>
+		<url-pattern>/jsonrfcadaptor</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IPAccessControlFilter</filter-name>
+		<url-pattern>/OnlineImageUPload/api/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IPAccessControlFilter</filter-name>
+		<url-pattern>/noaclqajsonrfcadaptor</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>AfmAccessControlFilter</filter-name>
+		<url-pattern>/noaclqajsonrfcadaptor</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>IPAccessControlFilter</filter-name>
+		<url-pattern>/noaclqarfctojson</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>AfmAccessControlFilter</filter-name>
+		<url-pattern>/noaclqarfctojson</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RfcTestExecute</display-name>
+		<servlet-name>RfcTestExecute</servlet-name>
+		<servlet-class>com.dotvik.xmw.saputils.RfcTestExecute</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RfcTestExecute</servlet-name>
+		<url-pattern>/rfcTest/RfcTestExecute</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC and Output JSON using ECC DEV</description>
+		<display-name>NoAclExecutePlainRFCToJSON</display-name>
+		<servlet-name>NoAclExecutePlainRFCToJSON</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ExecutePlainRFCToJSON</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoAclExecutePlainRFCToJSON</servlet-name>
+		<url-pattern>/noaclrfctojson</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC and Output JSON using ECCQA</description>
+		<display-name>NoAclQaExecutePlainRFCToJSON</display-name>
+		<servlet-name>NoAclQaExecutePlainRFCToJSON</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ExecutePlainRFCToJSON</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoAclQaExecutePlainRFCToJSON</servlet-name>
+		<url-pattern>/noaclqarfctojson</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ExecutePlainRFCToJSON</display-name>
+		<servlet-name>ExecutePlainRFCToJSON</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ExecutePlainRFCToJSON</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ExecutePlainRFCToJSON</servlet-name>
+		<url-pattern>/rfctojson</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC using JSON Input and Output JSON using ECC DEV</description>
+		<display-name>NoAclRFCExecutionAdaptor</display-name>
+		<servlet-name>NoAclRFCExecutionAdaptor</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.RFCExecutionAdaptor</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoAclRFCExecutionAdaptor</servlet-name>
+		<url-pattern>/noacljsonrfcadaptor</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC using JSON Input and Output JSON using ECCQA</description>
+		<display-name>NoAclQaRFCExecutionAdaptor</display-name>
+		<servlet-name>NoAclQaRFCExecutionAdaptor</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.RFCExecutionAdaptor</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoAclQaRFCExecutionAdaptor</servlet-name>
+		<url-pattern>/noaclqajsonrfcadaptor</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC using JSON Input and Output JSON using ECC Production</description>
+		<display-name>RFCExecutionAdaptor</display-name>
+		<servlet-name>RFCExecutionAdaptor</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.RFCExecutionAdaptor</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RFCExecutionAdaptor</servlet-name>
+		<url-pattern>/jsonrfcadaptor</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ImageUploadService</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.CustomHttpProxyServlet</servlet-class>
+		<init-param>
+			<param-name>serviceName</param-name>
+			<param-value>PPMOBImgUploadService</param-value>
+		</init-param>
+		<init-param>
+			<param-name>log</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImageUploadService</servlet-name>
+		<url-pattern>/OnlineImageUPload/api/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>SAP JCo ABAP to JAVA Server</description>
+		<display-name>SAP JCo Server</display-name>
+		<servlet-name>InBoundServer</servlet-name>
+		<servlet-class>com.dotvik.xmw.sapjcoserver.InBoundServer</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InBoundServer</servlet-name>
+		<url-pattern>/jcoadmin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC using JSON Input and Output JSON using ECC Production</description>
+		<display-name>ECommQARFCExecutionAdaptor</display-name>
+		<servlet-name>ECommQARFCExecutionAdaptor</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.RFCExecutionAdaptor</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ECommQARFCExecutionAdaptor</servlet-name>
+		<url-pattern>/ecommqajsonrfcadaptor</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ECommQARFCToJSON</display-name>
+		<servlet-name>ECommQARFCToJSON</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ExecutePlainRFCToJSON</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>HAVELLS_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ECommQARFCToJSON</servlet-name>
+		<url-pattern>/ecommqarfctojson</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>Executes RFC using JSON Input and Output JSON using ECC Production</description>
+		<display-name>NoaclECommQARFCExecutionAdaptor</display-name>
+		<servlet-name>NoaclECommQARFCExecutionAdaptor</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.RFCExecutionAdaptor</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoaclECommQARFCExecutionAdaptor</servlet-name>
+		<url-pattern>/noaclecommjsonrfcadaptor</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>NoaclECommQARFCToJSON</display-name>
+		<servlet-name>NoaclECommQARFCToJSON</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ExecutePlainRFCToJSON</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoaclECommQARFCToJSON</servlet-name>
+		<url-pattern>/noaclecommrfctojson</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>ServerMonitoring</description>
+		<display-name>ServerMonitoring</display-name>
+		<servlet-name>ServerMonitoring</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ServerMonitoring</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAILs_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServerMonitoring</servlet-name>
+		<url-pattern>/monitor</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description>ServerLogTrace</description>
+		<display-name>ServerLogTrace</display-name>
+		<servlet-name>ServerLogTrace</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ServerMonitoring</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServerLogTrace</servlet-name>
+		<url-pattern>/serverlogtrace</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>parametername</param-name>
+		<param-value>parametervalue</param-value>
+	</context-param>
+	<servlet>
+		<description></description>
+		<display-name>UploadFile</display-name>
+		<servlet-name>UploadFile</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.ExcellUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadFile</servlet-name>
+		<url-pattern>/UploadFile</url-pattern>
+	</servlet-mapping>
+
+	<!-- Custom Servlet for V2Retail -->
+
+	<servlet>
+		<description>ValueXMW</description>
+		<display-name>ValueXMW</display-name>
+		<servlet-name>ValueXMW</servlet-name>
+		<servlet-class>com.dotvik.xmw.v2retail.ValueXMW</servlet-class>
+
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ValueXMW</servlet-name>
+		<url-pattern>/ValueXMW/*</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Servlet to return Expected JSON Structure of an RFC for RFCExecutionAdapter -->
+
+	<servlet>
+		<description></description>
+		<display-name>RFCMetaInfo</display-name>
+		<servlet-name>RFCMetaInfo</servlet-name>
+		<servlet-class>com.dotvik.xmwgw.RFCMetaInfo</servlet-class>
+		<init-param>
+			<param-name>SAPINDEX</param-name>
+			<param-value>V2RETAIL_ECC_PROD</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RFCMetaInfo</servlet-name>
+		<url-pattern>/rfcmetainfo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<filter>
+		<filter-name>BasicAuthFilter</filter-name>
+		<filter-class>com.dotvik.xmwgw.BasicAuthenticationFilter</filter-class>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>androiduser</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>hhtapp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>realm</param-name>
+			<param-value>XMW Auth Service</param-value>
+		</init-param>
+	</filter>
+	
+	<filter>
+		<filter-name>ImageCachingFilter</filter-name>
+		<filter-class>net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter
+		</filter-class>
+		<init-param>
+		 <param-name>suppressStackTrace</param-name>
+		 <param-value>false</param-value>
+		</init-param>
+		<init-param>
+		 <param-name>cacheName</param-name>
+		 <param-value>imageCache</param-value>
+		</init-param>
+ 	</filter>
+ 	
+ 	
+	<filter-mapping>
+		<filter-name>BasicAuthFilter</filter-name>
+		<url-pattern>/picserver/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>ImageCachingFilter</filter-name>
+		<url-pattern>/picserver/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<servlet>
+		<description>V2PictureServlet FTP Picture Server</description>
+		<display-name>V2PictureServlet</display-name>
+		<servlet-name>V2PictureServlet</servlet-name>
+		<servlet-class>com.dotvik.xmw.v2retail.V2PictureServlet</servlet-class>
+		<init-param>
+			<param-name>ftphost</param-name>
+			<param-value>192.168.151.21</param-value>
+		</init-param>
+		<init-param>
+			<param-name>serverport</param-name>
+			<param-value>20</param-value>
+		</init-param>
+		<init-param>
+			<param-name>username</param-name>
+			<param-value>hht1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>hht1@123</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>V2PictureServlet</servlet-name>
+		<url-pattern>/picserver/*</url-pattern>
+	</servlet-mapping>
+
+
+<servlet>
+
+	<description>Version Check For Apps</description>
+                
+	<display-name>AppVersion</display-name>
+
+	<servlet-name>AppVersion</servlet-name>
+
+	<servlet-class>com.dotvik.xmwgw.AppVersion</servlet-class>
+</servlet>
+
+
+
+	<servlet-mapping>
+
+		<servlet-name>AppVersion</servlet-name>
+
+		<url-pattern>/appversion</url-pattern>
+
+	</servlet-mapping>
+	
+	
+	<listener>
+                <listener-class>net.sf.ehcache.constructs.web.ShutdownListener</listener-class>
+     </listener>
+
+</web-app>

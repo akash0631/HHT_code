@@ -1,0 +1,4 @@
+[
+{"function":"JCO_SET_TRACE", "handlerclass":"com.dotvik.xmw.sapjcoserver.SetTraceHandler", "endpoints": [{"url": "http://localhost:8080/xmwgw/testOutbound"}]},
+{"function":"STFC_CONNECTION", "handlerclass":"com.dotvik.xmw.sapjcoserver.StfcConnectionHandler", "endpoints": [{"url": "http://localhost:8080/xmwgw/testOutbound"}]}
+]

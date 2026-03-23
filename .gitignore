@@ -1,0 +1,5 @@
+*.log
+*.trc
+tomcat_8.5/logs/
+xmwgateway/logs/
+tomcat_8.5/work/

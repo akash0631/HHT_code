@@ -1,0 +1,14 @@
+[
+	{
+		"p12file":"/com_havells_mkonnect_prod_push.p12",
+		"isproduction": "true",
+		"password":"Havells@123",
+		"bundleid":"com.havells.mKonnect"
+	},
+	{
+		"p12file":"/com_havells_mkonnect_dev_push.p12",
+		"isproduction": "false",
+		"password":"Havells@123",
+		"bundleid":"com.havells.mKonnect"
+	}
+]

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<!-- Generated 5 Jan, 2017 2:56:56 PM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.dotvik.xmwgw.access.Xmwsaptpcm" table="xmwsaptpcm" >
+        <id name="saptpcmrefid" type="int">
+            <column name="saptpcmrefid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="xmwafm" class="com.dotvik.xmwgw.access.Xmwafm" fetch="select">
+            <column name="saptpcmafmrefid" not-null="true" />
+        </many-to-one>
+        <property name="saptpcmcolname" type="string">
+            <column name="saptpcmcolname" length="64" />
+        </property>
+        <property name="saptpcmvalue" type="string">
+            <column name="saptpcmvalue" length="32" />
+        </property>
+        <property name="isactive" type="boolean">
+            <column name="isactive" not-null="true" />
+        </property>
+        <property name="isdeleted" type="boolean">
+            <column name="isdeleted" not-null="true" />
+        </property>
+        <property name="createddate" type="timestamp">
+            <column name="createddate" length="0" not-null="true" />
+        </property>
+        <property name="modifieddate" type="timestamp">
+            <column name="modifieddate" length="0" not-null="true" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

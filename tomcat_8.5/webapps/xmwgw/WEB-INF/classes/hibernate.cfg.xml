@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">Mkonnect@987</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/xmw_gateway</property>
+        <property name="hibernate.connection.username">mkonnect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="connection.autoReconnect">true</property>
+         
+          <property name="hibernate.c3p0.min_size" >5</property><!-- Hibernate default: 1 
+         Minimum number of JDBC connections in the pool.-->
+         <property name="hibernate.c3p0.max_size">100</property><!-- Hibernate default: 100
+          Maximum number of JDBC connections in the pool. -->
+         
+         <property name="hibernate.c3p0.timeout" >300</property>	<!--  Hibernate default: 0
+         The seconds a Connection can remain pooled but unused before being discarded. Zero means idle connections never expire. -->
+        <property name="hibernate.c3p0.max_statements" >50</property>	<!-- Hibernate default: 0
+         The size of c3p0's PreparedStatement cache. Zero means statement caching is turned off. -->	
+        <property name="hibernate.c3p0.idle_test_period" >500</property> <!--Hibernate default: 0
+         idle time in seconds before a connection is automatically validated.
+         If this is a number greater than 0, c3p0 will test all idle, pooled but unchecked-out connections, every this number of seconds. -->
+        
+      
+         <property name="hibernate.connection.CharSet">utf8</property>
+          <property name="hibernate.connection.characterEncoding">utf8</property>
+          <property name="hibernate.connection.useUnicode">true</property>
+        	
+	
+		<mapping resource="com/dotvik/xmw/model/Mdmpvm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/MdmpvmIn.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Mdmppm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Mdmmpt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Mdmpdc.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Mdmmmp.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Mdmmct.hbm.xml" />
+		
+		<mapping resource="com/dotvik/xmw/model/Umseadt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsuam.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsumt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsusat.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsusav.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsurm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsamt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Umsueam.hbm.xml" />
+	
+		<mapping resource="com/dotvik/xmw/model/Xmwfpm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwlmt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwrom.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwmmt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwrmt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwomt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwdct.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwrmm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwmrm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwfmm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwpdt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/XmwfmmIn.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwfdt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwfsm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwffm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwalt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwmlm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwfom.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Xmwdst.hbm.xml" />
+	
+		<mapping resource="com/dotvik/xmw/model/Rpfrqm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Rpfrqt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Rpfrqp.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Rpfqtp.hbm.xml" />
+		
+		<mapping resource="com/dotvik/xmw/model/Hbfdtmt.hbm.xml" />
+	    <mapping resource="com/dotvik/xmw/model/Sapcpt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Sapuim.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Sapsoe.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Sapusu.hbm.xml" />
+		
+		<mapping resource="com/dotvik/xmw/model/Qtzqal.hbm.xml" />
+	    <mapping resource="com/dotvik/xmw/model/Qtzqsm.hbm.xml" />
+	   
+	    
+	    <mapping resource="com/dotvik/xmw/model/Dmsdal.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Dmsddm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Dmsdpm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Dmsdsp.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Nmsnmt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Nmsnum.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Nmsnal.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Nmsndm.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Nmsndt.hbm.xml" />
+		<mapping resource="com/dotvik/xmw/model/Nmsqnm.hbm.xml" />
+      	<mapping resource="com/dotvik/xmw/model/Nmsnct.hbm.xml" />
+      	
+      	<mapping resource="com/dotvik/xmw/model/Xmwappversionmaster.hbm.xml" />
+      	
+      	<mapping resource="com/dotvik/xmwgw/access/Xmwacl.hbm.xml" />
+      	<mapping resource="com/dotvik/xmwgw/access/Xmwafm.hbm.xml"/>
+      	<mapping resource="com/dotvik/xmwgw/access/Xmwpsm.hbm.xml"/>
+      	<mapping resource="com/dotvik/xmwgw/access/Xmwcem.hbm.xml"/>
+      	<mapping resource="com/dotvik/xmwgw/access/Xmwltm.hbm.xml"/>
+      	
+      	
+      	<!-- new mapping Xmwsaptpcm.hbm.xml 13 july -->
+      	<mapping resource="com/dotvik/xmwgw/access/Xmwsaptpcm.hbm.xml"/>
+      	
+       
+    </session-factory>
+</hibernate-configuration>

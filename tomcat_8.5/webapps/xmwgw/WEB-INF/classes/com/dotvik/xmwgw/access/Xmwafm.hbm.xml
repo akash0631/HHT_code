@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<!-- Generated 5 Jan, 2017 2:56:56 PM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.dotvik.xmwgw.access.Xmwafm" table="xmwafm">
+        <id name="afmrefid" type="int">
+            <column name="afmrefid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="xmwacl" class="com.dotvik.xmwgw.access.Xmwacl" fetch="select">
+            <column name="afmaclrefid" not-null="true" />
+        </many-to-one>
+        <property name="afmfunctionname" type="string">
+            <column name="afmfunctionname" length="64" />
+        </property>
+        <property name="afmfield1" type="string">
+            <column name="afmfield1" length="32" />
+        </property>
+        <property name="afmfield2" type="string">
+            <column name="afmfield2" length="64" />
+        </property>
+        <property name="createdate" type="timestamp">
+            <column name="createdate" length="0" not-null="true" />
+        </property>
+        <property name="modifidate" type="timestamp">
+            <column name="modifidate" length="0" not-null="true" />
+        </property>
+        <property name="isactive" type="boolean">
+            <column name="isactive" not-null="true" />
+        </property>
+        <property name="isdeleted" type="boolean">
+            <column name="isdeleted" not-null="true" />
+        </property>
+         
+        
+    </class>
+</hibernate-mapping>

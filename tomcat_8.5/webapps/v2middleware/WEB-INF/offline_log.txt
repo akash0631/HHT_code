@@ -1,0 +1,105 @@
+
+Tue Oct 11 15:16:11 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 15:21:42 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 15:23:51 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 15:34:13 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 15:39:04 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 15:40:28 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 16:00:08 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 16:03:14 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Tue Oct 11 16:06:39 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 10:36:14 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 11:12:50 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 11:12:53 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 11:17:01 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 11:17:02 IST 2022----Opening sap session
+Wed Oct 12 11:17:02 IST 2022----Session created
+Wed Oct 12 11:17:02 IST 2022----Calling RFC
+Wed Oct 12 11:17:03 IST 2022----Execution complete
+Wed Oct 12 11:17:03 IST 2022----Data Returned {"type":"S","id":"","number":"000","message":"Data Pushed-0070000025"}
+Wed Oct 12 11:17:03 IST 2022----Returning response: {"code":200,"status":"OK","message":"Data Pushed-0070000025"}
+Wed Oct 12 14:04:33 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 14:04:33 IST 2022----Opening sap session
+Wed Oct 12 14:04:33 IST 2022----Session created
+Wed Oct 12 14:04:33 IST 2022----Calling RFC
+Wed Oct 12 14:04:34 IST 2022----Execution complete
+Wed Oct 12 14:04:34 IST 2022----Data Returned {"type":"S","id":"","number":"000","message":"Data Pushed-0070000026"}
+Wed Oct 12 14:04:34 IST 2022----Returning response: {"code":200,"status":"OK","message":"Data Pushed-0070000026"}
+Wed Oct 12 14:12:46 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 14:12:46 IST 2022----Opening sap session
+Wed Oct 12 14:12:46 IST 2022----Session created
+Wed Oct 12 14:12:46 IST 2022----Calling RFC
+Wed Oct 12 14:12:47 IST 2022----Execution complete
+Wed Oct 12 14:12:47 IST 2022----Data Returned {"type":"S","id":"","number":"000","message":"Data Pushed-0070000027"}
+Wed Oct 12 14:12:47 IST 2022----Returning response: {"code":200,"status":"OK","message":"Data Pushed-0070000027"}
+Wed Oct 12 14:23:33 IST 2022----Controller stockTakeWithoutFile called
+Config file found: {"map":{"password":"Abap@123456","systemnumber":"00","saphostip":"192.168.144.194","saprouteraddress":"/H/119.226.154.186","client":"210","language":"en","username":"sap_abap"}}
+Offline server session mode
+210|sap_abap|Abap@123456|en|192.168.144.194|/H/119.226.154.186|00
+Session object created
+Wed Oct 12 14:23:33 IST 2022----Opening sap session
+Wed Oct 12 14:23:33 IST 2022----Session created
+Wed Oct 12 14:23:33 IST 2022----Calling RFC
+Wed Oct 12 14:23:33 IST 2022----Execution complete
+Wed Oct 12 14:23:33 IST 2022----Data Returned {"type":"S","id":"","number":"000","message":"Data Pushed-0070000028"}
+Wed Oct 12 14:23:33 IST 2022----Returning response: {"code":200,"status":"OK","message":"Data Pushed-0070000028"}

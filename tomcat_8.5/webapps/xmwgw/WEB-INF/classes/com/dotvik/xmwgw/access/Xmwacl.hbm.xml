@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<!-- Generated 5 Jan, 2017 2:56:56 PM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.dotvik.xmwgw.access.Xmwacl" table="xmwacl">
+        <id name="aclrefid" type="int">
+            <column name="aclrefid" />
+            <generator class="identity" />
+        </id>
+        <property name="aclclientid" type="string">
+            <column name="aclclientid" length="64" not-null="true" />
+        </property>
+        <property name="aclclientdetail" type="string">
+            <column name="aclclientdetail" length="256" not-null="true" />
+        </property>
+        <property name="acliplist" type="string">
+            <column name="acliplist" length="4096" not-null="true" />
+        </property>
+        <property name="aclfield1" type="string">
+            <column name="aclfield1" length="64" />
+        </property>
+        <property name="aclfield2" type="string">
+            <column name="aclfield2" length="128" />
+        </property>
+        <property name="isactive" type="boolean">
+            <column name="isactive" not-null="true" />
+        </property>
+        <property name="createddate" type="timestamp">
+            <column name="createddate" length="0" not-null="true" />
+        </property>
+        <property name="modifieddate" type="timestamp">
+            <column name="modifieddate" length="0" not-null="true" />
+        </property>
+        <property name="isdeleted" type="boolean">
+            <column name="isdeleted" not-null="true" />
+        </property>
+        <set name="xmwcems" table="xmwcem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cemaclrefid" not-null="true" />
+            </key>
+            <one-to-many class="com.dotvik.xmwgw.access.Xmwcem" />
+        </set>
+        <set name="xmwafms" table="xmwafm" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="afmaclrefid" not-null="true" />
+            </key>
+            <one-to-many class="com.dotvik.xmwgw.access.Xmwafm" />
+        </set>
+    </class>
+</hibernate-mapping>

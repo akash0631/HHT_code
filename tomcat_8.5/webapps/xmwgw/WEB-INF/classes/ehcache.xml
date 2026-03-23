@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="true" monitoring="autodetect"
+         dynamicConfig="true">
+
+   
+    <diskStore path="D:/Dotvik/xmwgateway/ehcache/diskstore"/>
+
+  
+
+    <transactionManagerLookup class="net.sf.ehcache.transaction.manager.DefaultTransactionManagerLookup"
+                              properties="jndiName=java:/TransactionManager" propertySeparator=";"/>
+
+
+    
+    <cacheManagerEventListenerFactory class="" properties=""/>
+
+
+    <defaultCache
+            maxEntriesLocalHeap="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            diskSpoolBufferSizeMB="30"
+            maxEntriesLocalDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </defaultCache>
+
+    <!--
+    Sample caches. Following are some example caches. Remove these before use.
+    -->
+
+    <!--
+    Sample cache named sampleCache1
+    This cache contains a maximum in memory of 10000 elements, and will expire
+    an element if it is idle for more than 5 minutes and lives for more than
+    10 minutes.
+
+    If there are more than 10000 elements it will overflow to the
+    disk cache, which in this configuration will go to wherever java.io.tmp is
+    defined on your system. On a standard Linux system this will be /tmp"
+    -->
+    <cache name="sampleCache1"
+           maxEntriesLocalHeap="10000"
+           maxEntriesLocalDisk="1000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+
+    <!--
+    Sample cache named sampleCache2
+    This cache has a maximum of 1000 elements in memory. There is no overflow to disk, so 1000
+    is also the maximum cache size. Note that when a cache is eternal, timeToLive and
+    timeToIdle are not used and do not need to be specified.
+    -->
+    <cache name="sampleCache2"
+           maxEntriesLocalHeap="1000"
+           eternal="true"
+           memoryStoreEvictionPolicy="FIFO"
+            />
+
+
+    <!--
+    Sample cache named sampleCache3. This cache overflows to disk. The disk store is
+    persistent between cache and VM restarts. The disk expiry thread interval is set to 10
+    minutes, overriding the default of 2 minutes.
+    -->
+    <cache name="sampleCache3"
+           maxEntriesLocalHeap="500"
+           eternal="false"
+           overflowToDisk="true"
+           diskPersistent="true"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           diskExpiryThreadIntervalSeconds="1"
+           memoryStoreEvictionPolicy="LFU">
+    </cache>
+
+
+    <!--
+    Sample distributed cache named sampleReplicatedCache1.
+    This cache replicates using defaults.
+    It also bootstraps from the cluster, using default properties.
+    -->
+    <cache name="sampleReplicatedCache1"
+           maxEntriesLocalHeap="10"
+           eternal="false"
+           timeToIdleSeconds="100"
+           timeToLiveSeconds="100">
+
+        <cacheEventListenerFactory
+                class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"/>
+        <bootstrapCacheLoaderFactory
+                class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory"/>
+    </cache>
+
+
+    <!--
+    Sample distributed cache named sampleReplicatedCache2.
+    This cache replicates using specific properties.
+    It only replicates updates and does so synchronously via copy
+    -->
+    <cache name="sampleRepicatedCache2"
+           maxEntriesLocalHeap="10"
+           eternal="false"
+           timeToIdleSeconds="100"
+           timeToLiveSeconds="100">
+        <cacheEventListenerFactory
+                class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+                properties="replicateAsynchronously=false, replicatePuts=false,
+                            replicatePutsViaCopy=false, replicateUpdates=true,
+                            replicateUpdatesViaCopy=true, replicateRemovals=false"/>
+    </cache>
+
+    <!--
+    Sample distributed cache named sampleReplicatedCache3.
+    This cache replicates using defaults except that the asynchronous replication
+    interval is set to 200ms.
+    This one includes / and # which were illegal in ehcache 1.5.
+    -->
+    <cache name="sampleReplicatedCache3"
+           maxEntriesLocalHeap="10"
+           eternal="false"
+           timeToIdleSeconds="100"
+           timeToLiveSeconds="100">
+        <cacheEventListenerFactory
+                class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+                properties="asynchronousReplicationIntervalMillis=200"/>
+        <persistence strategy="localTempSwap"/>
+    </cache>
+
+	<!--  for 30 days image caching on server  --> 
+	<cache name="imageCache"
+           maxEntriesLocalHeap="1000"
+           maxEntriesLocalDisk="10000"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="2592000"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+   
+</ehcache>

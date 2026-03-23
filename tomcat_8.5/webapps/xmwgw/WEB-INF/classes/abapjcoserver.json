@@ -1,0 +1,35 @@
+[
+{
+"SERVER_NAME": "V2PROD",
+"jco.server": {
+	"jco.server.gwhost": "192.168.144.30",
+	"jco.server.gwserv": "3300",
+	"jco.server.progid": "DOTVIKMW",
+	"jco.server.connection_count": "10",
+	"jco.server.trace": "1",
+	"jco.server.repository_destination": "V2RETAIL_ECC_PROD"
+	}
+},
+{
+"SERVER_NAME": "V2QA",
+"jco.server": {
+	"jco.server.gwhost": "192.168.144.122",
+	"jco.server.gwserv": "3300",
+	"jco.server.progid": "DOTVIKMW",
+	"jco.server.connection_count": "10",
+	"jco.server.trace": "1",
+	"jco.server.repository_destination": "V2RETAIL_ECC_QA"
+	}
+},
+{
+"SERVER_NAME": "V2DEV",
+"jco.server": {
+	"jco.server.gwhost": "192.168.144.120",
+	"jco.server.gwserv": "3300",
+	"jco.server.progid": "DOTVIKMW",
+	"jco.server.connection_count": "10",
+	"jco.server.trace": "1",
+	"jco.server.repository_destination": "V2RETAIL_ECC_DEV"
+	}
+}
+]

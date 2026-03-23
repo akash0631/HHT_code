@@ -1,0 +1,26 @@
+[
+	{
+		"SERVER_NAME": "package1",
+		"databaseurl": "jdbc:mysql://localhost:3306/test",
+		"username": "root",
+		"password": "1234",
+		"dbname": "test",
+		"driver": "com.mysql.jdbc.Driver"
+	},
+	{
+		"SERVER_NAME": "package2",
+		"databaseurl": "jdbc:mysql://localhost:3306/parmod",
+		"username": "root",
+		"password": "1234",
+		"dbname": "parmod",
+		"driver": "com.mysql.jdbc.Driver"
+	},
+	{
+		"SERVER_NAME": "package3",
+		"databaseurl": "jdbc:mysql://localhost:3306/xmw_gateway",
+		"username": "root",
+		"password": "1234",
+		"dbname": "xmw_gateway",
+		"driver": "com.mysql.jdbc.Driver"
+	}
+]

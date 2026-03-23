@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!-- '.'yyyy-MM-dd-HH-mm == app.log.2012-11-04-21-54 Roll log file at the 
+		beginning of every minute '.'yyyy-MM-dd-HH ==app.log.2012-11-04-22 Roll log 
+		file at the start of every hour '.'yyyy-MM-dd-a ==app.log.2012-11-04-AM/PM 
+		Roll log file at midnight and midday everyday( Half-daily) '.'yyyy-MM-dd 
+		==app.log.2012-11-04 Roll log file at everyday (Daily) '.'yyyy-ww ==app.log.2012-45/app.log.2012-46 
+		Roll log file at the start of each week '.'yyyy-MM ==app.log.2012-10/app.log.2012-11 
+		Roll log file on the first of each month -->
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yy HH:mm:ss} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="dailyFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="D:/Dotvik/xmwgateway/logs/xmw_gateway.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yy HH:mm:ss} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<!--Start New Appender added by sandeep 5/10/2017 -->
+
+	<appender name="pushServiceAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File"
+			value="D:/Dotvik/xmwgateway/logs/PushServiceLogs/PushService.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yy HH:mm:ss} %5p %c{1}:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="INFO" />
+			<param name="levelMax" value="INFO" />
+		</filter>
+
+	</appender>
+
+	<!--End New Appender added by sandeep 5/10/2017 -->
+
+
+	<!--Start Appender PullserviceAppender -->
+
+
+
+	<appender name="PullserviceAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File"
+			value="D:/Dotvik/xmwgateway/logs/PullServiceLogs/PullService.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yy HH:mm:ss} %5p %c{1}:%L - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="INFO" />
+			<param name="levelMax" value="INFO" />
+		</filter>
+
+	</appender>
+	<!--End PullserviceAppender -->
+
+	<appender name="inAndOutBoundAndAllServerInfo" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File"
+			value="D:/Dotvik/xmwgateway/logs/InAndOutBoundAndAllServerInfoLogs/InAndOutBoundAndAllServerInfo.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd/MM/yy HH:mm:ss} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+
+	<root>
+		<priority value="info" />
+		<appender-ref ref="dailyFileAppender" />
+		<appender-ref ref="console" />
+	</root>
+
+	<logger name="XMWLogger" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="dailyFileAppender" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<Logger name="com.dotvik" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="dailyFileAppender" />
+	</Logger>
+
+	<Logger name="com.dotvik.xmw" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="dailyFileAppender" />
+	</Logger>
+
+	<Logger name="com.dotvik.xmwcs" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="dailyFileAppender" />
+	</Logger>
+
+	<Logger name="com.dotvik.xmwgw" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="dailyFileAppender" />
+	</Logger>
+
+	<Logger name="com.dotvik.xmwgw.v2retail" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="dailyFileAppender" />
+	</Logger>
+
+	<!--START PUSH SERVICE -->
+
+	<logger name="com.dotvik.xmw.sapjcoserver.queue">
+		<level value="INFO" />
+		<appender-ref ref="pushServiceAppender" />
+	</logger>
+
+	<logger name="com.dotvik.xmwgw.RFCExecutionAdaptor">
+		<level value="INFO" />
+		<appender-ref ref="pushServiceAppender" />
+	</logger>
+	<!-- END PUSH SERVICE -->
+
+
+	<!-- START PULL SERVICE -->
+
+	<logger name="com.dotvik.xmwgw.ExecutePlainRFCToJSON">
+
+		<appender-ref ref="PullserviceAppender" />
+		<appender-ref ref="pullServiceInvice" />
+
+	</logger>
+
+	<logger name="com.dotvik.xmwgw.HttpProxyServlet">
+
+		<level value="INFO" />
+		<appender-ref ref="PullserviceAppender" />
+
+	</logger>
+
+	<logger name="com.dotvik.xmwgw.MultipleDatabaseConnectionProvider">
+		<level value="INFO" />
+		<appender-ref ref="inAndOutBoundAndAllServerInfo" />
+	</logger>
+
+	<logger name="com.dotvik.xmwcs.util">
+		<level value="INFO" />
+		<appender-ref ref="PullserviceAppender" />
+	</logger>
+	<!-- END PULL SERVICE -->
+
+	<!-- START InAndOutBoundAndAllServerInfo -->
+
+	<logger name="com.dotvik.xmw.sapjcoserver">
+		<level value="INFO" />
+		<appender-ref ref="inAndOutBoundAndAllServerInfo" />
+	</logger>
+
+	<logger name="com.dotvik.xmw.saputils">
+		<level value="INFO" />
+		<appender-ref ref="inAndOutBoundAndAllServerInfo" />
+	</logger>
+	<!-- END InAndOutBoundAndAllServerInfo -->
+
+</log4j:configuration>

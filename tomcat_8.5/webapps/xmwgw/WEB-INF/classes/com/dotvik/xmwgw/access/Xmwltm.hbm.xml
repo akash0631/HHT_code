@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<!-- Generated 15 Nov, 2016 3:00:54 PM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.dotvik.xmwgw.access.Xmwltm" table="xmwltm" >
+        <id name="ltmrefid" type="int">
+            <column name="ltmrefid" />
+            <generator class="identity" />
+        </id>
+        <property name="ltmrfcname" type="string">
+            <column name="ltmrfcname" length="64" not-null="true" />
+        </property>
+         <property name="islogtrace" type="boolean">
+            <column name="islogtrace" not-null="true" />
+        </property>
+        
+        <property name="createddate" type="timestamp">
+            <column name="createddate" length="0" not-null="true" />
+        </property>
+        <property name="modifieddate" type="timestamp">
+            <column name="modifieddate" length="0" not-null="true" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

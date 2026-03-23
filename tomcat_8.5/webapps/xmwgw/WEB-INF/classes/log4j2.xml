@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+	<Properties>
+		<Property name="basePath">D:/HanaProd/xmwgateway/logs</Property>
+	</Properties>
+
+	<Appenders>
+		<RollingFile name="dailyFileAppender" fileName="${basePath}/xmw_gateway.log"
+			filePattern="${basePath}/xmw_gateway-%d{yyyy-MM-dd-HH}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+			</Policies>
+		</RollingFile>
+
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<Root level="error">
+			<appender-ref ref="console" />
+		</Root>
+
+		<logger name="XMWLogger" additivity="false"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</logger>
+
+		<logger name="CacheLogger" additivity="false"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</logger>
+
+		<Logger name="com.dotvik" additivity="true"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</Logger>
+
+		<Logger name="com.dotvik.xmw" additivity="true"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</Logger>
+
+		<Logger name="com.dotvik.xmwcs" additivity="true"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</Logger>
+
+		<Logger name="com.dotvik.xmwgw" additivity="false"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</Logger>
+		
+		<Logger name="com.dotvik.xmwgw.v2retail" additivity="false"  level="debug">
+			<appender-ref ref="dailyFileAppender" />
+		</Logger>
+		
+	</Loggers>
+	
+</Configuration>

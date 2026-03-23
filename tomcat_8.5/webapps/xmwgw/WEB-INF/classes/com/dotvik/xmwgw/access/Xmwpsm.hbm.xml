@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<!-- Generated 15 Nov, 2016 3:00:54 PM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.dotvik.xmwgw.access.Xmwpsm" table="xmwpsm" >
+        <id name="psmrefid" type="int">
+            <column name="psmrefid" />
+            <generator class="identity" />
+        </id>
+        <property name="psmparamvalue" type="string">
+            <column name="psmparamvalue" length="64" not-null="true" />
+        </property>
+        <property name="psmurlpattern" type="string">
+            <column name="psmurlpattern" length="64" not-null="true" />
+        </property>
+        <property name="psmip" type="string">
+            <column name="psmip" length="512" not-null="true" />
+        </property>
+        <property name="psmurl" type="string">
+            <column name="psmurl" length="512" not-null="true" />
+        </property>
+        <property name="psmprotocol" type="string">
+            <column name="psmprotocol" length="64" not-null="true" />
+        </property>
+        <property name="isactive" type="boolean">
+            <column name="isactive" not-null="true" />
+        </property>
+        <property name="isdeleted" type="boolean">
+            <column name="isdeleted" not-null="true" />
+        </property>
+        <property name="createddate" type="timestamp">
+            <column name="createddate" length="0" not-null="true" />
+        </property>
+        <property name="modifieddate" type="timestamp">
+            <column name="modifieddate" length="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
